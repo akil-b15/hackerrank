@@ -1,0 +1,22 @@
+static int countingValleys(int n, String s) {
+        char[] ch= s.toCharArray();
+        int step=0;
+        int count=0;
+        int num=0;
+        
+        for(int i=0;i<ch.length;i++){
+            num++;
+            if(ch[i]=='U'){
+                step++;
+            }
+            else{
+                step--;
+            }
+              for(int j=num; j>=num-2; j--){
+                    if(step==0 && ch[i-1]=='U'){
+                        count++;
+                    }
+              }     
+        }
+        return count;
+    }
