@@ -1,0 +1,14 @@
+public static int birthdayCakeCandles(List<Integer> candles) {
+    Collections.sort(candles);
+    int max = candles.get(candles.size()-1);
+    int count =1;
+    for(int i=candles.size()-2; i>=0; i--){
+        if(candles.get(i)==max){
+            count++;
+        }else{
+            return count;
+        }
+        
+    }
+    return count;
+    }
